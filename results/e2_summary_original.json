@@ -1,0 +1,201 @@
+{
+  "bucket_format": "canonical tuple (CSV repr only)",
+  "protocol": "train regular / test disjoint regular and irregular; conservative per-bucket cost ratio",
+  "train_edits": 17280,
+  "test_edits": 34560,
+  "model_buckets": 8,
+  "sync_buckets": 0,
+  "settings": {
+    "min_gain": 0.03,
+    "min_support": 8,
+    "uncertainty": 1.0,
+    "repeats": 3,
+    "train_seeds": 10,
+    "test_seeds": 10
+  },
+  "results": {
+    "regular": {
+      "count": 17280,
+      "all_equal": true,
+      "igv_ms": 323376.8673,
+      "sync_ms": 380467.5202,
+      "cost_policy_ms": 331937.6575,
+      "paired_ms": 323376.8673,
+      "end_to_end_ms": 336370.5777,
+      "feature_overhead_ms": 4259.5889,
+      "decision_overhead_ms": 173.3313,
+      "gain_actual_pct": -2.647310635258915,
+      "gain_paired_pct": 0.0,
+      "gain_end_to_end_pct": -4.0181323136962765,
+      "oracle_best_ms": 291119.6151,
+      "paired_regret_ms": 32257.252199999988,
+      "sync_choices": 0,
+      "harmful_sync": 0,
+      "reasons": {
+        "uncertain_or_costly": 17280
+      },
+      "by_topology": {
+        "chain": {
+          "count": 5760,
+          "all_equal": true,
+          "igv_ms": 93347.0361,
+          "sync_ms": 117221.0429,
+          "cost_policy_ms": 95780.4939,
+          "paired_ms": 93347.0361,
+          "end_to_end_ms": 97253.3736,
+          "feature_overhead_ms": 1415.7656,
+          "decision_overhead_ms": 57.1141,
+          "gain_actual_pct": -2.6068934822880863,
+          "gain_paired_pct": 0.0,
+          "gain_end_to_end_pct": -4.184747221984919,
+          "oracle_best_ms": 83131.7724,
+          "paired_regret_ms": 10215.263699999996,
+          "sync_choices": 0,
+          "harmful_sync": 0,
+          "reasons": {
+            "uncertain_or_costly": 5760
+          }
+        },
+        "fanout": {
+          "count": 5760,
+          "all_equal": true,
+          "igv_ms": 121696.8356,
+          "sync_ms": 129992.4265,
+          "cost_policy_ms": 124714.2534,
+          "paired_ms": 121696.8356,
+          "end_to_end_ms": 126172.727,
+          "feature_overhead_ms": 1400.0351,
+          "decision_overhead_ms": 58.4385,
+          "gain_actual_pct": -2.479454609582299,
+          "gain_paired_pct": 0.0,
+          "gain_end_to_end_pct": -3.677902862414273,
+          "oracle_best_ms": 110920.2356,
+          "paired_regret_ms": 10776.600000000006,
+          "sync_choices": 0,
+          "harmful_sync": 0,
+          "reasons": {
+            "uncertain_or_costly": 5760
+          }
+        },
+        "layered": {
+          "count": 5760,
+          "all_equal": true,
+          "igv_ms": 108332.9956,
+          "sync_ms": 133254.0508,
+          "cost_policy_ms": 111442.9102,
+          "paired_ms": 108332.9956,
+          "end_to_end_ms": 112944.4771,
+          "feature_overhead_ms": 1443.7882,
+          "decision_overhead_ms": 57.7787,
+          "gain_actual_pct": -2.8706993495156263,
+          "gain_paired_pct": 0.0,
+          "gain_end_to_end_pct": -4.2567654244761055,
+          "oracle_best_ms": 97067.6071,
+          "paired_regret_ms": 11265.388500000001,
+          "sync_choices": 0,
+          "harmful_sync": 0,
+          "reasons": {
+            "uncertain_or_costly": 5760
+          }
+        }
+      }
+    },
+    "irregular": {
+      "count": 17280,
+      "all_equal": true,
+      "igv_ms": 235383.9961,
+      "sync_ms": 382863.0719,
+      "cost_policy_ms": 238101.4653,
+      "paired_ms": 235383.9961,
+      "end_to_end_ms": 243280.4955,
+      "feature_overhead_ms": 4972.5901,
+      "decision_overhead_ms": 206.4401,
+      "gain_actual_pct": -1.1544834164704865,
+      "gain_paired_pct": 0.0,
+      "gain_end_to_end_pct": -3.3547307934415738,
+      "oracle_best_ms": 222080.4842,
+      "paired_regret_ms": 13303.511899999983,
+      "sync_choices": 0,
+      "harmful_sync": 0,
+      "reasons": {
+        "uncertain_or_costly": 672,
+        "unseen_bucket": 16608
+      },
+      "by_topology": {
+        "chain": {
+          "count": 5760,
+          "all_equal": true,
+          "igv_ms": 56663.0642,
+          "sync_ms": 119164.1674,
+          "cost_policy_ms": 57102.7382,
+          "paired_ms": 56663.0642,
+          "end_to_end_ms": 58853.2737,
+          "feature_overhead_ms": 1679.1153,
+          "decision_overhead_ms": 71.4202,
+          "gain_actual_pct": -0.7759446231995426,
+          "gain_paired_pct": 0.0,
+          "gain_end_to_end_pct": -3.8653213180800616,
+          "oracle_best_ms": 55568.5385,
+          "paired_regret_ms": 1094.5256999999983,
+          "sync_choices": 0,
+          "harmful_sync": 0,
+          "reasons": {
+            "uncertain_or_costly": 168,
+            "unseen_bucket": 5592
+          }
+        },
+        "fanout": {
+          "count": 5760,
+          "all_equal": true,
+          "igv_ms": 117133.5785,
+          "sync_ms": 141971.8496,
+          "cost_policy_ms": 119249.1105,
+          "paired_ms": 117133.5785,
+          "end_to_end_ms": 120916.147,
+          "feature_overhead_ms": 1599.2469,
+          "decision_overhead_ms": 67.7896,
+          "gain_actual_pct": -1.8060850074686163,
+          "gain_paired_pct": 0.0,
+          "gain_end_to_end_pct": -3.229277674633657,
+          "oracle_best_ms": 107504.7504,
+          "paired_regret_ms": 9628.828099999999,
+          "sync_choices": 0,
+          "harmful_sync": 0,
+          "reasons": {
+            "uncertain_or_costly": 504,
+            "unseen_bucket": 5256
+          }
+        },
+        "layered": {
+          "count": 5760,
+          "all_equal": true,
+          "igv_ms": 61587.3534,
+          "sync_ms": 121727.0549,
+          "cost_policy_ms": 61749.6166,
+          "paired_ms": 61587.3534,
+          "end_to_end_ms": 63511.0748,
+          "feature_overhead_ms": 1694.2279,
+          "decision_overhead_ms": 67.2303,
+          "gain_actual_pct": -0.26346837628519193,
+          "gain_paired_pct": 0.0,
+          "gain_end_to_end_pct": -3.1235656247569743,
+          "oracle_best_ms": 59007.1953,
+          "paired_regret_ms": 2580.1581000000006,
+          "sync_choices": 0,
+          "harmful_sync": 0,
+          "reasons": {
+            "unseen_bucket": 5760
+          }
+        }
+      }
+    }
+  },
+  "caveats": [
+    "Model predicts ratio from per-bucket aggregate training costs, not a calibrated probabilistic bound",
+    "Upper quartile is a heuristic uncertainty margin, not a statistical guarantee",
+    "Oracle-best uses per-edit measured times and is a hindsight lower bound",
+    "End-to-end includes pre-edit feature and decision cost, but excludes engine initialization and offline training",
+    "All workloads synthetic and share the same Python in-memory implementation",
+    "Timing order randomized, but cache/system noise remains; independent timings differ from paired estimates"
+  ]
+}
